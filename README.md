@@ -6,3 +6,6 @@
 <!-- (state can be asynchronus and state can be modified use this.setState) -->
 
 <!-- Analoginya adalah komponen adalah rumah dan props adalah kendaraan yang dapat mengiri makanan sedangkan state adalah keluarga yang ada dalam rumah(komponen) -->
+
+<!-- Import memanggil komponen lain -->
+<!-- EKspr Mengeluarkan komponen -->

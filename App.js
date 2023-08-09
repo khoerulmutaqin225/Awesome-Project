@@ -55,73 +55,85 @@
 //   },
 // });
 
-import { StyleSheet, Text, View, SafeAreaView,TouchableOpacity, Dimensions } from 'react-native'
-import React, {useState}  from 'react'
-import { WARNA_ABU_ABU, WARNA_WARNING } from '../Awesome-Project/src/utils/constant'
+// import { StyleSheet, Text, View, SafeAreaView,TouchableOpacity, Dimensions } from 'react-native'
+// import React, {useState}  from 'react'
+// import { WARNA_ABU_ABU, WARNA_WARNING } from '../Awesome-Project/src/utils/constant'
 
-const Pesanan = () => {
-  const[nilai, rubahNilai]=useState(0)
+// const Pesanan = () => {
+//   const[nilai, rubahNilai]=useState(0)
 
-  return (
-    // <SafeAreaView>
-      <View style={styles.header}> 
-            <TouchableOpacity onPress={()=>rubahNilai(nilai+1)}>
-              <View >
-              {console.log('ini Tambah')}
-                <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
-                  Tambah
-                </Text>
-              </View>
-            </TouchableOpacity>
+//   return (
+//     // <SafeAreaView>
+//       <View style={styles.header}> 
+//             <TouchableOpacity onPress={()=>rubahNilai(nilai+1)}>
+//               <View >
+//               {console.log('ini Tambah')}
+//                 <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
+//                   Tambah
+//                 </Text>
+//               </View>
+//             </TouchableOpacity>
       
-              <View>
-                <Text style={{ fontSize:40, color:'black', alignSelf:'center' }}>
-                  {nilai}
-                </Text>
-              </View>   
+//               <View>
+//                 <Text style={{ fontSize:40, color:'black', alignSelf:'center' }}>
+//                   {nilai}
+//                 </Text>
+//               </View>   
       
-            <TouchableOpacity onPress={()=>rubahNilai(nilai-1)}>
-              <View>
-                {console.log('ini Kurang')}
-                <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
-                  Kurang
-                </Text>
-              </View>
-            </TouchableOpacity>
+//             <TouchableOpacity onPress={()=>rubahNilai(nilai-1)}>
+//               <View>
+//                 {console.log('ini Kurang')}
+//                 <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
+//                   Kurang
+//                 </Text>
+//               </View>
+//             </TouchableOpacity>
             
       
-            <TouchableOpacity onPress={()=>rubahNilai(0)}>
-              <View>
-              {console.log('ini Null')}
-                <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
-                  Reset
-                </Text>
-              </View>
-            </TouchableOpacity>
+//             <TouchableOpacity onPress={()=>rubahNilai(0)}>
+//               <View>
+//               {console.log('ini Null')}
+//                 <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
+//                   Reset
+//                 </Text>
+//               </View>
+//             </TouchableOpacity>
 
-      </View>
-    // </SafeAreaView>
-  );
+//       </View>
+//     // </SafeAreaView>
+//   );
+// }
+
+// export default Pesanan
+
+// const windowWidth = Dimensions.get('window').width;
+// const windowHeight = Dimensions.get('window').height;
+
+
+// const styles = StyleSheet.create({
+//   page: {
+//     flex: 1,
+//     // backgroundColor: 'white  '
+//   },
+//   header: {
+//     width: windowWidth,
+//     height: windowHeight  ,
+//     // paddingHorizontal: ,
+//     padding: 160,
+//     alignSelf:'center',
+//     backgroundColor: WARNA_WARNING
+//   },
+
+// })
+
+import { View, Text } from 'react-native'
+import React from 'react'
+import HomeScreen from '../Awesome-Project/src/screens/HomeScreen'
+
+export default function App() {
+  return (
+    <View>  
+      <HomeScreen />
+    </View>
+  )
 }
-
-export default Pesanan
-
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
-
-
-const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-    // backgroundColor: 'white  '
-  },
-  header: {
-    width: windowWidth,
-    height: windowHeight  ,
-    // paddingHorizontal: ,
-    padding: 160,
-    alignSelf:'center',
-    backgroundColor: WARNA_WARNING
-  },
-
-})
