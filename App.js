@@ -55,25 +55,73 @@
 //   },
 // });
 
-import { View, Text, SafeAreaView } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, SafeAreaView,TouchableOpacity, Dimensions } from 'react-native'
+import React, {useState}  from 'react'
+import { WARNA_ABU_ABU, WARNA_WARNING } from '../Awesome-Project/src/utils/constant'
 
-export default function App() {
+const Pesanan = () => {
+  const[nilai, rubahNilai]=useState(0)
+
   return (
-    <SafeAreaView>
-      <Anak props={'Halo saya dikirim dari parent'} />   
-      <Text>Halo saya komponen parent</Text>
-      {console.log('hello world')}
-    </SafeAreaView>
-  )
+    // <SafeAreaView>
+      <View style={styles.header}> 
+            <TouchableOpacity onPress={()=>rubahNilai(nilai+1)}>
+              <View >
+              {console.log('ini Tambah')}
+                <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
+                  Tambah
+                </Text>
+              </View>
+            </TouchableOpacity>
+      
+              <View>
+                <Text style={{ fontSize:40, color:'black', alignSelf:'center' }}>
+                  {nilai}
+                </Text>
+              </View>   
+      
+            <TouchableOpacity onPress={()=>rubahNilai(nilai-1)}>
+              <View>
+                {console.log('ini Kurang')}
+                <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
+                  Kurang
+                </Text>
+              </View>
+            </TouchableOpacity>
+            
+      
+            <TouchableOpacity onPress={()=>rubahNilai(0)}>
+              <View>
+              {console.log('ini Null')}
+                <Text style={{ fontSize:20, color:'blue', alignSelf:'center' }}>
+                  Reset
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+      </View>
+    // </SafeAreaView>
+  );
 }
 
-// Penamaan function harus diawali dengan hurup kapital jangan hurup kecil
-export function Anak ({props}) {
-  return(
-    <View>
-      {/* <Text> Halo saya adalah komponen anak </Text> */}
-      <Text>{props}</Text>
-    </View>
-  )
-}
+export default Pesanan
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+
+const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    // backgroundColor: 'white  '
+  },
+  header: {
+    width: windowWidth,
+    height: windowHeight  ,
+    // paddingHorizontal: ,
+    padding: 160,
+    alignSelf:'center',
+    backgroundColor: WARNA_WARNING
+  },
+
+})
