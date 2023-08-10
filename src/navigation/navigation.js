@@ -9,6 +9,7 @@ import DetailScreen from '../screens/DetailScreen';
 import VerifDetailScreen from '../screens/VerifDetailScreen';
 import News from '../screens/News';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import StyleScreen from '../screens/StyleScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -39,6 +40,7 @@ export function Tab1() {
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Detail" component={DetailScreen} />
         <Tab.Screen name="Verify" component={VerifDetailScreen} />
+        <Tab.Screen name="Style" component={StyleScreen} />
       </Tab.Navigator>
     // </NavigationContainer>
   )
