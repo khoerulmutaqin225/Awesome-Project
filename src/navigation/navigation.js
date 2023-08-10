@@ -8,14 +8,18 @@ import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
 import VerifDetailScreen from '../screens/VerifDetailScreen';
 import News from '../screens/News';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="News" component={News} />
+        {/* options={{ headerShown:false === berfungsi meghilangkan header di stack navigation */}
+        <Stack.Screen name="News" component={Tab1} options={{ headerShown:false }}/>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Detail" component={DetailScreen} />
         <Stack.Screen name="Verify" component={VerifDetailScreen} />
@@ -25,3 +29,17 @@ function Navigation() {
 }
 
 export default Navigation;
+
+
+export function Tab1() {
+  return (
+    // <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="News" component={News} />
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Detail" component={DetailScreen} />
+        <Tab.Screen name="Verify" component={VerifDetailScreen} />
+      </Tab.Navigator>
+    // </NavigationContainer>
+  )
+}
