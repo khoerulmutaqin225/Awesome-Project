@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
     kotakmerah:{
-        height: 50, // 50 (artinya 50 pixel) atau 50% berarti persentase dari layar itu
-        width:50,
+        height: '50%', // 50 (artinya 50 pixel) atau 50% berarti persentase dari layar itu
+        width:'50%',
         backgroundColor:'red'
     },
     kotakkuning:{
