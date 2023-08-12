@@ -1,10 +1,20 @@
-import { View, Text } from 'react-native'
+import { View, Text, Dimensions } from 'react-native'
 import React from 'react'
+import styles from './HomeStyle'
+
+const { width, height } = Dimensions.get('window');
 
 export default function Title() {
     return (
         <View>
-          <Text style={{ fontSize:40, paddingBottom:10, textAlign:'center', backgroundColor:'red' }}>News</Text>
+          <Text style={{ 
+            fontSize:20,
+            height: height *0.08,
+            textAlign:'center',
+            fontWeight: 'bold',
+            // backgroundColor:'#1877f2' 
+            backgroundColor:'#1e90ff'
+            }}>News</Text>
         </View>
     )
 }
