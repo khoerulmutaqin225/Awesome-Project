@@ -50,7 +50,7 @@ export default function LoginScreen({ Props,navigation }) {
         }}>
           <TouchableOpacity 
             style={styles.userBtn}
-            onPress={() => this.props.navigation.navigate('News')}
+            onPress={() => navigation.navigate('News')}
             // onPress={() => alert("Login Works")}
           >
             <Text style={styles.btnTxt}>

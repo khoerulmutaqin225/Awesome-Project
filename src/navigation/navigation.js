@@ -85,7 +85,7 @@ const Tab1 = () => {
 
       <Tab.Screen name="Login" component={LoginScreen} options={{
         // headershown berfungsi untuk menghilangkan header
-        title:'My App',
+        // title:'My App',
         headerShown: false,
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
