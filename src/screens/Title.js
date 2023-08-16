@@ -9,6 +9,7 @@ export default function Title() {
         <View>
           <Text style={{ 
             fontSize:20,
+            color: 'white',
             height: height *0.08,
             textAlign:'center',
             fontWeight: 'bold',

@@ -19,7 +19,7 @@ const instruction = Platform.select({
 // }
 
 export default function LoginScreen({ Props,navigation }) {
-  // static
+  // static  
   navigationOptions ={
     header: null
   } 
@@ -36,7 +36,7 @@ export default function LoginScreen({ Props,navigation }) {
         <TextInput
           style={styles.input}
           placeholder='Username'
-        />
+          />
         <TextInput
           style={styles.input}
           placeholder='Password'
@@ -60,7 +60,7 @@ export default function LoginScreen({ Props,navigation }) {
 
           <TouchableOpacity 
             style={styles.userBtn}
-            onPress={() => alert("Register Works")}
+            onPress={() => alert("The 'Register' button works, but it has not been defined yet.")}
           >
           <Text style={styles.btnTxt}>
               Register

@@ -12,6 +12,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StyleScreen from '../screens/StyleScreen';
 import LoginScreen from '../screens/LoginScreen';
 import Title from '../screens/Title';
+import InfoScreen from '../screens/MapsScreen';
+import MapsScreen from '../screens/MapsScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -104,13 +106,10 @@ const Tab1 = () => {
           </View>
         )
       }} />
-      <Tab.Screen name="News" component={News} options={{
-        
-                //  options={{ 
+      <Tab.Screen name="News" component={News} options={{        
                   headerShown: false,
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
-        {/* <Title/> */}
             <Image
               source={require('../assets/icons/news.png')}
               resizeMode="contain"
@@ -126,6 +125,28 @@ const Tab1 = () => {
           </View>
         )
       }} />
+      {/* <Tab.Screen name="Maps" component={MapsScreen} options={{
+        
+                //  options={{ 
+                  headerShown: false,
+        tabBarIcon: ({ focused }) => (
+          <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
+            <Image
+              source={require('../assets/icons/maps.png')}
+              resizeMode="contain"
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: focused ? '#e32f45' : '#748c94'
+              }}
+            />
+            <Text style={{ color: focused ? '#e32' : '#748', fontSize: 8 }}>
+              MAPS
+            </Text>
+          </View>
+        )
+      }} /> */}
+
       {/* <Tab.Screen name="Home" component={HomeScreen} options={{
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
@@ -144,7 +165,10 @@ const Tab1 = () => {
           </View>
         )
       }} /> */}
-      <Tab.Screen name="Detail" component={DetailScreen}
+      
+      {/* Tab Detail  */}
+
+      {/* <Tab.Screen name="Detail" component={DetailScreen}
         options={{
 
          headerShown: false,
@@ -163,8 +187,11 @@ const Tab1 = () => {
             <CustomTabBarButton {...props} />
           )
         }}
-      />
-      <Tab.Screen name="Verify" component={VerifDetailScreen} options={{
+      /> */}
+
+
+      {/* Tab Verif  */}
+      {/* <Tab.Screen name="Verify" component={VerifDetailScreen} options={{
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
             <Image
@@ -181,8 +208,11 @@ const Tab1 = () => {
             </Text>
           </View>
         )
-      }} />
-      <Tab.Screen name="Style" component={StyleScreen} options={{
+      }} /> */}
+      
+
+      {/* TAb Style */}
+      {/* <Tab.Screen name="Style" component={StyleScreen} options={{
         tabBarIcon: ({ focused }) => (
           <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
             <Image
@@ -198,8 +228,8 @@ const Tab1 = () => {
               STYLE
             </Text>
           </View>
-        )
-      }} />
+        ) */}
+      {/* }} /> */}
       {/* <Tab.Screen name="Verify" component={VerifDetailScreen} />
         <Tab.Screen name="Style" component={StyleScreen} /> */}
     </Tab.Navigator>
