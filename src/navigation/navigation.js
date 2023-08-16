@@ -14,6 +14,7 @@ import LoginScreen from '../screens/LoginScreen';
 import Title from '../screens/Title';
 import InfoScreen from '../screens/MapsScreen';
 import MapsScreen from '../screens/MapsScreen';
+import account from '../screens/account';
 
 
 const Stack = createNativeStackNavigator();
@@ -121,6 +122,25 @@ const Tab1 = () => {
             />
             <Text style={{ color: focused ? '#e32' : '#748', fontSize: 8 }}>
               NEWS
+            </Text>
+          </View>
+        )
+      }} />
+      <Tab.Screen name="Account" component={account} options={{        
+                  headerShown: false,
+        tabBarIcon: ({ focused }) => (
+          <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
+            <Image
+              source={require('../assets/icons/account.png')}
+              resizeMode="contain"
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: focused ? '#e32f45' : '#748c94'
+              }}
+            />
+            <Text style={{ color: focused ? '#e32' : '#748', fontSize: 8 }}>
+              ACCOUNT
             </Text>
           </View>
         )
