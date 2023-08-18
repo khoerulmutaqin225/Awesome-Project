@@ -15,6 +15,7 @@ import Title from '../screens/Title';
 import InfoScreen from '../screens/MapsScreen';
 import MapsScreen from '../screens/MapsScreen';
 import account from '../screens/account';
+import list from '../screens/list';
 
 
 const Stack = createNativeStackNavigator();
@@ -107,6 +108,25 @@ const Tab1 = () => {
           </View>
         )
       }} />
+      <Tab.Screen name="List" component={list} options={{        
+                  headerShown: false,
+        tabBarIcon: ({ focused }) => (
+          <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
+            <Image
+              source={require('../assets/icons/list.png')}
+              resizeMode="contain"
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: focused ? '#e32f45' : '#748c94'
+              }}
+            />
+            <Text style={{ color: focused ? '#e32' : '#748', fontSize: 8 }}>
+              LIST
+            </Text>
+          </View>
+        )
+      }} />
       <Tab.Screen name="News" component={News} options={{        
                   headerShown: false,
         tabBarIcon: ({ focused }) => (
@@ -137,7 +157,7 @@ const Tab1 = () => {
                 width: 25,
                 height: 25,
                 tintColor: focused ? '#e32f45' : '#748c94'
-              }}
+              }}GIT
             />
             <Text style={{ color: focused ? '#e32' : '#748', fontSize: 8 }}>
               ACCOUNT
