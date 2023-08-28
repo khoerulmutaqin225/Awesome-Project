@@ -11,6 +11,7 @@ import {
   FlatList,
 } from 'react-native';
 import React, {Component, useState} from 'react';
+import { longPressHandlerName } from 'react-native-gesture-handler/lib/typescript/handlers/LongPressGestureHandler';
 // import styles from './HomeStyle'
 
 const {width, height} = Dimensions.get('window');
@@ -50,12 +51,22 @@ export default function list() {
     {name: 'Srikaya', key: 'srikaya'},
   ]);
 
+  const pressHandler =(name) =>{
+    console.log(name);
+  }
+
   return (
     <View style={styles.container}>
       <FlatList
         keyExtractor={item => item.id}
         data={fruit}
-        renderItem={({item}) => <Text style={styles.item}>{item.name}</Text>}
+        renderItem={({item}) =>(
+        <View>
+          <TouchableOpacity onPress={()=>pressHandler(item.name)}>
+            <Text style={styles.item}>{item.name}</Text>
+          </TouchableOpacity>
+        </View>
+        )}
       />
       {/* <ScrollView>
         {fruit.map(item => {
