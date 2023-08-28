@@ -16,6 +16,7 @@ import InfoScreen from '../screens/MapsScreen';
 import MapsScreen from '../screens/MapsScreen';
 import account from '../screens/account';
 import list from '../screens/list';
+import odoo from '../screens/odoo';
 
 
 const Stack = createNativeStackNavigator();
@@ -108,6 +109,31 @@ const Tab1 = () => {
           </View>
         )
       }} />
+
+      
+      <Tab.Screen name="Odoo" component={odoo} options={{
+        // headershown berfungsi untuk menghilangkan header
+        // title:'My App',
+        headerShown: false,
+        tabBarIcon: ({ focused }) => (
+          <View style={{ alignItems: 'center', justifyContent: 'center', top: 1 }}>
+            <Image
+              source={require('../assets/icons/odoo.png')}
+              resizeMode="contain"
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: focused ? '#e32f45' : '#748c94'
+              }}
+            />
+            <Text style={{ color: focused ? '#e32' : '#748', fontSize: 8 }}>
+              ODOO
+            </Text>
+          </View>
+        )
+      }} />
+
+
       <Tab.Screen name="List" component={list} options={{        
                   headerShown: false,
         tabBarIcon: ({ focused }) => (

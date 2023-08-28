@@ -8,10 +8,9 @@ import {
   Platform,
   StyleSheet,
   ScrollView,
+  FlatList,
 } from 'react-native';
 import React, {Component, useState} from 'react';
-import {FlatList} from 'react-native';
-// import { FlatList } from 'react-native-gesture-handler';
 // import styles from './HomeStyle'
 
 const {width, height} = Dimensions.get('window');
@@ -61,7 +60,7 @@ export default function list() {
       {/* <ScrollView>
         {fruit.map(item => {
           return (
-            <Viewkey={item.key}>
+            <Vie  wkey={item.key}>
               <Text style={styles.item}>{item.name}</Text>
             </View>
           );
